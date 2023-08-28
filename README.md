@@ -1,5 +1,5 @@
 # 30daysJSProjects
 
-This repo tends to keep my progress about JS
+This repo display my progress about JS
 
-Day one - weather system using API. Done
+Day one - weather system using API. Done /
