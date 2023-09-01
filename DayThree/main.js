@@ -84,6 +84,7 @@ const selectAnswer = (e) => {
   const isCorrect = selectedBtn.dataset.correct == "true";
   if (isCorrect) {
     selectedBtn.classList.add("correct");
+    score++;
   } else {
     selectedBtn.classList.add("incorrect");
   }
@@ -97,4 +98,28 @@ const selectAnswer = (e) => {
   });
   Nextbtn.style.display = "block";
 };
+
+const showScore = () => {
+  resetState();
+  Question.innerHTML = `You score is ${score} out of ${question.length}`;
+  Nextbtn.innerHTML = "Play Again";
+  Nextbtn.style.display = "block";
+};
+
+const handleNextButton = () => {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < question.length) {
+    showQuestion();
+  } else {
+    showScore();
+  }
+};
+
+Nextbtn.addEventListener("click", () => {
+  if (currentQuestionIndex < question.length) {
+    handleNextButton();
+  } else {
+    startquiz();
+  }
+});
 startquiz();
