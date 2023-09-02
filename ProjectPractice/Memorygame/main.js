@@ -50,20 +50,29 @@ const createBoard = () => {
 function checkmatch() {
   const cards = document.querySelectorAll(`img`);
 
-  if (cardChosen[0] != cardChosen[1]) {
-    console.log("not matching");
-  } else {
+  if (cardChosenId[0] === cardChosenId[1]) {
+    alert("You've selected same card!");
+    cards[cardChosenId[0]].setAttribute("src", "images/blank.png");
+    cards[cardChosenId[1]].setAttribute("src", "images/blank.png");
+  }
+
+  if (cardChosen[0] === cardChosen[1]) {
     cards[cardChosenId[0]].setAttribute("src", "images/white.png");
     cards[cardChosenId[1]].setAttribute("src", "images/white.png");
     cards[cardChosenId[0]].removeEventListener("click", flipCard);
     cards[cardChosenId[1]].removeEventListener("click", flipCard);
     cardsWon.push(cardChosen);
+  } else {
+    cards[cardChosenId[0]].setAttribute("src", "images/blank.png");
+    cards[cardChosenId[1]].setAttribute("src", "images/blank.png");
   }
 
   cardChosen = [];
   cardChosenId = [];
 
-  console.log(cardChosen);
+  if (cardsWon.length == cardArray.length / 2) {
+    console.log("You won!");
+  }
 }
 
 //creating function to flip the card
