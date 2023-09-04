@@ -1,5 +1,9 @@
+const scoreContainer = document.querySelector(`#score`);
+const timeContainer = document.querySelector(`#time-left`);
 const gridContainer = document.querySelector(".grid");
 
+let score = 0;
+let time = 60;
 // Create 9 squares and add them to the grid
 for (let i = 0; i < 9; i++) {
   const grid = document.createElement("div");
@@ -18,6 +22,10 @@ function randomMole() {
 
   const randomIndex = Math.floor(Math.random() * gridElements.length);
   gridElements[randomIndex].classList.add("mole");
+  timeContainer.innerHTML = time--;
+  if (time == 0) {
+    clearInterval(resultMole);
+  }
 }
 
 // Set up the interval to show the mole
@@ -30,6 +38,8 @@ gridElements.forEach((grid) => {
       console.log("Mole clicked");
       // Remove the 'mole' class when clicked
       e.target.classList.remove("mole");
+      score += 30;
+      scoreContainer.innerHTML = score;
     }
   });
 });
