@@ -1,0 +1,6 @@
+.hero {
+    text-align: center;
+    font-family: 'Clash Display', sans-serif;
+    display: flex;
+    justify-content: center;
+}
