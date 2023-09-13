@@ -141,6 +141,14 @@ function checkForCollision() {
     changeDirection();
   }
 
+  if (
+    ballCurrentPosition[0] + ballDiameter >= currentPosition[0] && // Ball's right edge is at or beyond the user's left edge
+    ballCurrentPosition[0] <= currentPosition[0] + blockWidth && // Ball's left edge is at or before the user's right edge
+    ballCurrentPosition[1] <= currentPosition[1] + blockHeight // Ball's bottom edge is at or above the user's top edge
+  ) {
+    changeDirection();
+  }
+
   if (ballCurrentPosition[1] <= 0) {
     clearInterval(timerId);
     document.removeEventListener("keydown", moveUser);
