@@ -5,8 +5,8 @@
   --clr-slate400: #94a3b8;
   --clr-slate600: #475569;
   --clr-slate800: hsl(217, 33%, 17%);
-  --clr-rose: #67e8f9;
-  --clr-teal: #4ade80;
+  --clr-rose: #f43f5e;
+  --clr-teal: #14b8a6;
 
   /* rose rbg value rgb(225, 29, 72) */
   /* indigo rbg value  rgb(79, 70, 229)*/
@@ -70,4 +70,8 @@ button {
   background: none;
   cursor: pointer;
   color: inherit;
+}
+
+strong {
+  color: var(--clr-rose);
 }

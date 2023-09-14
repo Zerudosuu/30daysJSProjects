@@ -16,6 +16,7 @@
 .header__menu {
     height: 30px;
     width: 30px;
+    cursor: pointer;
 }
 
 .header__logo {
