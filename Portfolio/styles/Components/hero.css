@@ -1,18 +1,21 @@
 .hero {
     font-family: 'Clash Display', sans-serif;
     position: relative;
+
 }
 
 .hero__title {
-    font-size: var(--size-9xl);
-
+    text-align: center;
+    font-size: var(--size-7xl);
 }
+
+
 
 .hero__description {
     text-align: center;
-    width: 60ch;
+    width: 40ch;
     line-height: 1.3em;
-    font-size: var(--size-2xl);
+    font-size: var(--size-base);
     font-family: 'Archivo', sans-serif;
     font-weight: 200;
     color: var(--clr-slate400);
@@ -20,8 +23,7 @@
 }
 
 .hero__text-wrapper {
-    border: 1px solid red;
-    padding-top: 5rem;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,15 +33,78 @@
 
 .hero__blob {
     position: absolute;
-    top: -10em;
-    left: 0;
+    top: 30px;
+    left: 70px;
     width: auto;
     height: auto;
     overflow: visible;
     z-index: -1;
+
 }
 
 .hero__blob img {
-    width: 650px;
-    height: 650px;
+    width: 300px;
+    height: 300px;
+
 }
+
+.hero__btn {
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: var(--size-lg);
+
+}
+
+/* xs */
+@media (min-width: 475px) {
+    .hero__description {
+        font-size: var(--size-base);
+        width: 40ch;
+    }
+}
+
+/* sm */
+/* @media (min-width: 640px) {
+ 
+} */
+
+/* md */
+/* @media (min-width: 768px) {
+ 
+} */
+
+/* lg */
+@media (min-width: 1024px) {
+    .hero__description {
+        font-size: var(--size-2xl);
+    }
+
+    .hero__title {
+        text-align: center;
+        font-size: var(--size-9xl);
+    }
+
+    .hero__description {
+        font-size: var(--size-2xl);
+        width: 60ch;
+    }
+
+    .hero__btn {
+        padding: 20px 40px;
+        color: #fff;
+        border-radius: 20px;
+        font-size: var(--size-xl);
+
+    }
+}
+
+/* xl */
+/* @media (min-width: 1280px) {
+
+} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+  
+} */

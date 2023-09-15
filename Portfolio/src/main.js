@@ -6,5 +6,9 @@ import "../styles/Components/mobile-nav.css";
 import "../styles/utils.css";
 
 import mobilenav from "./utils/mobile-nav";
+import dragElements from "./utils/mobile-nav";
+import DarkMode from "./utils/darkmode";
 
+DarkMode();
+dragElements();
 mobilenav();

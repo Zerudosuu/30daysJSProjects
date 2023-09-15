@@ -72,6 +72,8 @@ button {
   color: inherit;
 }
 
-strong {
+/* strong {
   color: var(--clr-rose);
-}
+  font-size: var(--size-10xl);
+  font-family: 'Panchang', sans-serif;
+} */

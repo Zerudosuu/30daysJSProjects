@@ -52,6 +52,8 @@
 
 .mobile-nav__btn {
     font-size: var(--size-sm);
+    padding: 0.5em 1em;
+    border-radius: 6px;
 }
 
 .mobile-nav__closebtn {
