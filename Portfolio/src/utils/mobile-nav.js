@@ -2,7 +2,7 @@ const mobilenav = () => {
   const mobile_nav = document.querySelector(".mobile-nav");
   const headermenubtn = document.querySelector(".header__menu");
   const closemenu = document.querySelector(".mobile-nav__closebtn");
-  const blob = document.querySelector(".hero__blob");
+  const blob = document.querySelector(".hero__blob1");
 
   headermenubtn.addEventListener("click", () => {
     mobile_nav.style.display = "flex";
@@ -22,7 +22,7 @@ const mobilenav = () => {
     requestAnimationFrame(rotationAnimation);
   }
 
-  rotationAnimation();
+  // rotationAnimation();
 };
 
 export default mobilenav;

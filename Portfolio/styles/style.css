@@ -51,6 +51,8 @@ body {
   font-family: 'Archivo', sans-serif;
   background: var(--clr-dark);
   color: var(--clr-light);
+  overflow-x: hidden;
+
 }
 
 img,
@@ -72,8 +74,8 @@ button {
   color: inherit;
 }
 
-/* strong {
+strong {
   color: var(--clr-rose);
   font-size: var(--size-10xl);
   font-family: 'Panchang', sans-serif;
-} */
+}

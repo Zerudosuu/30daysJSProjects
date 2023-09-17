@@ -1,6 +1,6 @@
 .hero {
     font-family: 'Clash Display', sans-serif;
-    position: relative;
+
 
 }
 
@@ -28,25 +28,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.2em;
+    gap: 2rem
 }
 
-.hero__blob {
+.hero__blob1 {
     position: absolute;
-    top: 30px;
-    left: 70px;
+    top: -30em;
+    left: -20em;
     width: auto;
     height: auto;
     overflow: visible;
     z-index: -1;
+    background-color: var(--clr-rose);
+    height: 900px;
+    width: 900px;
+    border-radius: 50%;
+    filter: blur(45rem);
 
 }
 
-.hero__blob img {
-    width: 300px;
-    height: 300px;
 
-}
 
 .hero__btn {
     padding: 10px 20px;
