@@ -1,5 +1,4 @@
 .services {
-
     padding: 40px 0;
     position: relative;
 }
@@ -16,12 +15,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background: #f7fee7;
+    background: var(--clr-section);
     gap: 20px;
 
 }
-
-
 
 .services svg {
     height: 100px;
@@ -35,7 +32,7 @@
 }
 
 .services__list p {
-    color: var(--clr-slate600);
+    color: var(--clr-dark);
     width: 40ch;
 }
 

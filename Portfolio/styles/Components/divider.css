@@ -15,5 +15,5 @@
 }
 
 .divider__svgs .shape-fill {
-    fill: #f7fee7;
+    fill: var(--clr-section);
 }
