@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Archivo', sans-serif;
+    padding-top: 2rem;
 }
 
 .header__list {
@@ -12,9 +13,6 @@
     list-style: none;
     gap: 20px;
 }
-
-
-
 
 .header__menu {
     height: 30px;
