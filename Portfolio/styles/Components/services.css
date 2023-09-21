@@ -1,21 +1,25 @@
 .services {
     padding: 40px 0;
     position: relative;
+
+
+
 }
 
 .services__title {
+    margin-top: -10rem;
     color: var(--clr-dark);
     text-align: center;
     font-size: var(--size-7xl);
-    padding-bottom: 3rem;
+    padding: 4rem 0;
     font-family: 'Clash Display', sans-serif;
 }
 
 .services__wrapper {
+    background: var(--clr-section);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background: var(--clr-section);
     gap: 20px;
 
 }
@@ -32,7 +36,7 @@
 }
 
 .services__list p {
-    color: var(--clr-dark);
+    color: var(--clr-slate800);
     width: 40ch;
 }
 

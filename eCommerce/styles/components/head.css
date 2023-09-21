@@ -1,0 +1,32 @@
+.head {
+    margin-top: 2rem;
+    font-family: 'Chillax', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.head__list {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.head__list li {
+    padding: 5px;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease-out;
+}
+
+.head__list li:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
