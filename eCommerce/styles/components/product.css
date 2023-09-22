@@ -12,7 +12,7 @@
 
 /* main elements */
 .product__main {
-    border: 1px solid green;
+
     flex: 1;
 }
 
@@ -30,6 +30,33 @@
     border: 1px solid black;
     height: 93%;
     width: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: repeat(4, .4fr);
+    grid-template-rows: repeat(auto, .1fr);
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.product__content {
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Chillax', sans-serif;
+
+
+}
+
+.product_img {
+    max-width: 100px;
+    max-height: 100px;
+    mix-blend-mode: multiply;
+    align-items: center;
 }
 
 /* sidebar elements */

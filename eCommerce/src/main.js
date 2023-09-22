@@ -5,3 +5,7 @@ import "../styles/components/hero.css";
 import "../styles/components/divider.css";
 import "../styles/components/product.css";
 import "../styles/utils.css";
+
+import fetchingData from "./utils/gettingData";
+
+fetchingData();
