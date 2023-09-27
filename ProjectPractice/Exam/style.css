@@ -1,0 +1,152 @@
+.container {
+    border: 1px solid #ff0000(236, 217, 217);
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.enemyContainer,
+.characterContainer {
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    /* Full-width */
+    height: 10px;
+    /* Specified height */
+    background: #000000;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: url(./images/player1.png) no-repeat center center;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    /* Set a specific slider handle width */
+    height: 10px;
+    /* Slider handle height */
+    background: url(./images/player1.png) no-repeat center center;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.SliderContainer {
+    width: 100%;
+    height: 200px;
+}
+
+.Name {
+    font-size: 15px;
+}
+
+.canvases {
+    border: 1px solid rgb(14, 14, 14);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.healthManaContainer {
+    border: 1px solid black;
+    position: absolute;
+    left: 100px;
+    top: 180px;
+
+
+}
+
+.playerCanvas {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    height: 350px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.EnemyCanvas {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    height: 350px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+
+.combatSection {
+    border: 1px solid rgb(235, 1, 1);
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.BtnContainer {
+    border: 1px solid black;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.btn {
+    padding: 20px 40px;
+}
+
+.playercontainer {
+    border: 1px solid black;
+    height: 85%;
+    width: 50%;
+    padding: 10px;
+}
+
+.enemycontainer {
+    padding: 10p x;
+    border: 1px solid red;
+    height: 85%;
+    width: 50%;
+    padding: 10px;
+}
+
+.characterContainer {
+    display: flex;
+    height: 100%;
+    gap: 20px;
+}
+
+#enemyHealthRange {
+    direction: rtl;
+}

@@ -1,3 +1,10 @@
+.hero {
+    transition: all 0.5s linear;
+    opacity: 0;
+    z-index: -111;
+}
+
+
 .hero__description-wrapper {
     display: flex;
     justify-content: space-between;
@@ -13,7 +20,7 @@
     gap: 20px;
 }
 
-.header__img-grid {
+.hero__img-grid {
     height: 500px;
     width: 1000px;
     flex: 1;
@@ -66,4 +73,8 @@
 .hero__btn {
     padding: 15px 30px;
     border-radius: 10px;
+}
+
+.show {
+    opacity: 1;
 }

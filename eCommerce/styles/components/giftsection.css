@@ -1,0 +1,77 @@
+.gifting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+    position: relative;
+    transition: all 0.5s linear;
+    opacity: 0;
+
+
+}
+
+.gifting__wrapper {
+
+    background-color: var(--clr-dark);
+    color: var(--clr-section);
+}
+
+.gifting__header {
+    text-align: center;
+    width: 50%;
+    font-size: var(--size-2xl);
+}
+
+.gifting__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60ch;
+    letter-spacing: -0.05em;
+    line-height: 0.9;
+}
+
+.gifting__details h3 {
+    font-size: var(--size-base);
+    font-family: 'Chillax', sans-serif;
+    font-weight: 400;
+
+}
+
+.gifting__details::before {
+    content: '';
+
+}
+
+.giftspan {
+    color: var(--clr-rose);
+    font-size: var(--size-3xl);
+}
+
+.giftspanheader {
+    color: var(--clr-rose);
+    font-size: var(--size-3xl);
+}
+
+.giftblob {
+    z-index: 1;
+    position: absolute;
+    top: 5rem;
+    left: -25rem;
+    height: 600px;
+    width: 600px;
+    background-color: var(--clr-rose);
+    border-radius: 59% 41% 69% 31% / 51% 42% 58% 49%;
+    filter: blur(45rem);
+}
+
+.giftBtn {
+    margin-top: 2rem;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: var(--size-lg);
+}
+
+.show {
+    opacity: 1;
+}
