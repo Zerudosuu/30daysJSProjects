@@ -3,12 +3,25 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="playerSelection.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam</title>
 </head>
 
 <body>
+
+
+    <section class="CharacterSelectMenu">
+        <button class="sample">Okay</button>
+        <div class="showPlayer">
+            <img src="" alt="" class="playerChoosenChar">
+        </div>
+
+        <div class="PlayerSelection">
+        </div>
+
+    </section>
 
     <div class="container">
 
@@ -18,7 +31,7 @@
                 <input type="range" step="1" min="1" max="100" value="50" class="slider" id="enemyRange">
             </div>
             <div class="playerRange">
-                <h3>Player</h3>
+                <h>Player</h>
                 <input type="range" step="1" min="1" max="100" value="0" class="slider" id="playerRange">
             </div>
         </div>
@@ -26,9 +39,9 @@
 
         <div class="combatSection">
             <div class="BtnContainer">
-                <button class="BasicAttack btn">Basic </button>
-                <button class="Special btn"> Special </button>
-                <button class="Evade btn"> Evade</button>
+                <button class="Special btn"> </button>
+                <button class="Utility btn"> </button>
+                <button class="BasicAttack btn"> </button>
             </div>
 
             <div class="characterContainer">
@@ -38,6 +51,8 @@
                     <input type="range" step="1" min="1" max="100" value="0" class="Hpslider" id="playerHealthRange">
                     <h3>Mana</h3>
                     <input type="range" step="1" min="1" max="100" value="0" class="Manaslider" id="playerManaRange">
+
+                    <img src="" alt="" class="playerImg">
                 </div>
                 <div class="enemycontainer">
                     <h3 class="EnemyName"></h3>
@@ -53,8 +68,6 @@
         <button class="StartRace"> Play</button>
     </div>
 
-
-    <button class="Attack"> Attack</button>
     <script src="main.js"></script>
 </body>
 

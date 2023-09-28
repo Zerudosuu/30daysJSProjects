@@ -1,11 +1,12 @@
 .container {
     border: 1px solid #ff0000(236, 217, 217);
     height: 100vh;
-    width: auto;
-    display: flex;
+    width: 98vw;
+    display: none;
     flex-direction: column;
     align-items: center;
     padding: 10px;
+
 }
 
 
