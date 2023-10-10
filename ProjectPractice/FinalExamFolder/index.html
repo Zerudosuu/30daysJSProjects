@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="wholeContainer">
+        <div class="mainMenu">
+            <div class="gameTitle">
+                <h1 class="">GRAND ARENA</h1>
+            </div>
+            <div class="leftSide"></div>
+            <div class="menuSide">
+                <div class="menusContainer">
+                    <div class="Title border"></div>
+                    <div class="Start border">
+                        <button class="startGamebtn btn">Start Game</button>
+                    </div>
+                    <div class="Settings border">
+                        <button class="settingsBtn btn">Settings</button>
+                    </div>
+                    <div class="Characters border">
+                        <button class="charactersBtn btn">Characters</button>
+                    </div>
+                    <div class="Credits border">
+                        <button class="creditsBtn btn">Credits</button>
+                    </div>
+                    <div class="Exit border">
+                        <button class="exitBtn btn">Exit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="characterSelection">
+            <div class="characterSelection__header border"></div>
+            <div class="characterSelection__character-name border"></div>
+            <div class="characterSelection__show-character border">
+                <div class="imagecontainer">
+                    <img src="" alt="" class="CharacterSelectedImage">
+                </div>
+                <div class="stats">
+                    <div class="statscontainer">
+
+                        <h1 class="charHealth"></h1>
+                        <h1 class="charMana"></h1>
+                        <h1 class="charAttacks"></h1>
+
+                    </div>
+
+                    <button class="CommenceBattle">START GAME</button>
+                </div>
+            </div>
+            <div class="characterSelection__listOfCharacters border">
+                <div class="characterContainer">
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="battleArea">
+            <div class="PlayerHealthManaContainer">
+                <h3>Player Health</h3>
+                <div class="playerHealthBar">
+
+                </div>
+            </div>
+            <div class="PlayerImageContainer ">
+                <img src="" alt="" class="player animate__animated">
+            </div>
+            <div class="EnemyHealthManaContainer">
+                <h3>Enemy Health</h3>
+                <div class="EnemyHealthBar">
+
+                </div>
+            </div>
+            <div class="EnemyImageContainer">
+                <img src="" alt="" class="OpponentSide animate__animated  ">
+            </div>
+            <div class="AttackOptionButtons">
+                <div class="optionscontainer animate__animated">
+                    <button class="moves btn" id="move1"></button>
+                    <button class="moves btn" id="move2"></button>
+                    <button class="moves btn" id="move3"></button>
+                    <button class="moves btn" id="move4"></button>
+                </div>
+
+            </div>
+            <div class="RaceMeter">
+                <h1>Player</h1>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="playerRange">
+                </div>
+                <h1>Enemy</h1>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="enemyRange">
+                </div>
+
+                <button class="StartRace">Start</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

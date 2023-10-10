@@ -6,11 +6,12 @@ import "../styles/components/product.css";
 import "../styles/components/divider.css";
 import "../styles/components/highlight.css";
 import "../styles/components/giftsection.css";
+import "../styles/components/footer.css";
 
 import "../styles/utils.css";
 
 import fetchingData from "./utils/gettingData";
 import AOS from "./utils/AOS";
 
-AOS();
 fetchingData();
+AOS();

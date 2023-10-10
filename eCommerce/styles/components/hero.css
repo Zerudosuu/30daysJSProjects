@@ -1,7 +1,7 @@
 .hero {
     transition: all 0.5s linear;
     opacity: 0;
-    z-index: -111;
+    z-index: -1;
 }
 
 
@@ -33,13 +33,14 @@
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 5px;
 
-    z-index: -1;
+
 
 }
 
 .grid {
     border: 1px solid black;
     border-radius: 30px;
+    z-index: -999;
 
 }
 
@@ -47,6 +48,7 @@
     width: 100%;
     height: 100%;
     border-radius: 30px;
+    z-index: -999999;
 }
 
 .hero {
@@ -54,6 +56,7 @@
     justify-content: space-between;
     position: relative;
     overflow: visible;
+
 }
 
 .hero__description-title {
@@ -73,8 +76,64 @@
 .hero__btn {
     padding: 15px 30px;
     border-radius: 10px;
+
 }
 
 .show {
     opacity: 1;
+}
+
+.hero__btn-wrapper {
+    z-index: 999;
+}
+
+/* Cart */
+
+.CartContainer {
+
+    position: fixed;
+    height: 700px;
+    width: 500px;
+    right: 20px;
+    top: 25%;
+    z-index: 999;
+
+
+}
+
+.cartIcon {
+    height: 50px;
+    width: 50px;
+    background: var(--clr-rose);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+}
+
+.cartIcon svg {
+    height: 20px;
+    width: 20px;
+    color: white;
+}
+
+.cartIcon:hover {
+    transform: scale(1.3);
+}
+
+.itemContainer {
+    height: 100%;
+    width: 100%;
+    border: 1px solid green;
+    background: var(--clr-light);
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+    display: none;
 }

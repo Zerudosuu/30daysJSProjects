@@ -4,7 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: fixed;
+    top: 0;
+    left: 10%;
+    transition: background 0.5s ease;
+    z-index: 99999;
+    animation: wipe-cinematic-in;
 
 }
 
@@ -29,4 +34,29 @@
     color: var(--clr-light);
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
+}
+
+.nav-active {
+    background-color: var(--clr-rose);
+
+}
+
+
+@keyframes wipe-cinematic-in {
+    0% {
+        clip-path: inset(100% 0 100% 0);
+    }
+
+    30%,
+    70% {
+        clip-path: inset(10% 0 10% 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+[transition-style="in:wipe:cinematic"] {
+    animation-name: wipe-cinematic-in;
 }

@@ -7,7 +7,7 @@ const fetchingData = () => {
 
       for (let i = 0; i < response.length; i++) {
         product.innerHTML += `<div class="product__content">
-                <img src="${response[i].image}" alt="" class="product_img">
+                <img src="${response[i].image[0]}" alt="" class="product_img">
                 <h2 class="product__title">${response[i].title}</h2>
                 <h4 class="product__category">${response[i].category}</h4>
                 <p class="product__description">${response[i].description}</p>
@@ -19,7 +19,11 @@ const fetchingData = () => {
       }
     }
 
-    fetchProducts("https://fakestoreapi.com/products");
+    fetchProducts(
+      "https://https://api.escuelajs.co/api/v1/products.com/products"
+    );
+
+    console.log(reponse.error);
   });
 };
 
