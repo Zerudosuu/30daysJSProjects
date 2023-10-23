@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -40,7 +42,7 @@
         </div>
 
         <div class="characterSelection">
-            <div class="characterSelection__header border"></div>
+            <div class="characterSelection__header border"> PLEASE CHOOSE YOUR CHARACTER</div>
             <div class="characterSelection__character-name border"></div>
             <div class="characterSelection__show-character border">
                 <div class="imagecontainer">
@@ -48,7 +50,6 @@
                 </div>
                 <div class="stats">
                     <div class="statscontainer">
-
                         <h1 class="charHealth"></h1>
                         <h1 class="charMana"></h1>
                         <h1 class="charAttacks"></h1>
@@ -71,7 +72,6 @@
             <div class="PlayerHealthManaContainer">
                 <h3>Player Health</h3>
                 <div class="playerHealthBar">
-
                 </div>
             </div>
             <div class="PlayerImageContainer ">
@@ -88,27 +88,54 @@
             </div>
             <div class="AttackOptionButtons">
                 <div class="optionscontainer animate__animated">
-                    <button class="moves btn" id="move1"></button>
-                    <button class="moves btn" id="move2"></button>
-                    <button class="moves btn" id="move3"></button>
-                    <button class="moves btn" id="move4"></button>
+                    <button class="Inventory"> <img src="./images/Inventory.png" alt="">
+                        <h4>Bag</h4>
+                        <div class="Storage">
+                        </div>
+                    </button>
+                    <button class="moves" id="move1"></button>
+                    <button class="moves" id="move2"></button>
+                    <button class="moves" id="move3"></button>
+                    <button class="moves" id="move4"></button>
                 </div>
 
             </div>
-            <div class="RaceMeter">
-                <h1>Player</h1>
-                <div class="slidecontainer">
+            <div class="RaceMeter animate__animated">
+                <h1 class="playerName"></h1>
+                <div class="slidecontainer ">
                     <input type="range" min="1" max="100" value="50" class="slider" id="playerRange">
                 </div>
-                <h1>Enemy</h1>
+                <h1 class="enemyName"></h1>
                 <div class="slidecontainer">
                     <input type="range" min="1" max="100" value="50" class="slider" id="enemyRange">
                 </div>
 
-                <button class="StartRace">Start</button>
+                <button class="StartRace"></button>
+            </div>
+
+
+            <div class="GameOver">
+                <h1>GAME OVER</h1>
+
+                <div class="buttoncontainer__Gameover">
+                    <button class="ReturnHome">Home</button>
+                    <button class="Selection">return to char select</button>
+                </div>
+
             </div>
         </div>
+
+
     </section>
+
+    <audio autoplay>
+        <source src="./Audio/League Of Legends - Arena Queue Music [Complete].webm" type="audio/webm">
+    </audio>
+
+    <audio id="hoverSound">
+        <source src="./Audio/interface-124464_CnPiVwAQ.mp3" type="audio/mpeg">
+    </audio>
+
 
     <script src="main.js"></script>
 </body>

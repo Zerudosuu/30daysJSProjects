@@ -1,5 +1,5 @@
 .product_wrapper {
-    background: var(--clr-light);
+    background: var(--clr-section);
     padding-top: 3rem;
 
 }
@@ -19,25 +19,37 @@
 .product__filter-group {
     font-family: 'Chillax', sans-serif;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .product__filter-btn {
-    border: 1px solid red;
     padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product__filter-btn svg {
+    height: 15px;
+    width: 15px;
 }
 
 .product__grid-container {
-    border: 1px solid black;
     height: 93%;
     width: auto;
     overflow: hidden;
     overflow-y: scroll;
-
+    border-top: 3px dashed black;
+    border-bottom: 3px dashed black;
     display: grid;
     grid-template-columns: repeat(4, .4fr);
-    grid-template-rows: repeat(auto, .1fr);
+    grid-template-rows: repeat(5, 1.2fr);
     grid-gap: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .product__content {
@@ -51,9 +63,12 @@
     padding: 5px;
     gap: 10px;
     border-radius: 10px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow: 35px 35px 70px #929292,
-        -35px -35px 70px #ffffff;
+    background: linear-gradient(145deg, #dee5d0, #fffff7);
+    box-shadow: 7px 7px 7px #a1a596,
+        -7px -7px 7px #ffffff;
+
+
+
 
 }
 
@@ -62,26 +77,31 @@
 }
 
 .product_img {
-    border: 1px solid red;
+
     max-width: 200px;
     max-height: 150px;
-    mix-blend-mode: multiply;
+
     align-items: center;
     background-position: center;
 }
+
+.product_img {
+    mix-blend-mode: multiply;
+}
+
 
 /* sidebar elements */
 
 .product__sidebar {
     font-family: 'Chillax', sans-serif;
-    border: 1px solid red;
+    border-right: 10px dashed rgb(23, 23, 23);
     width: 25%;
     padding: 10px;
 }
 
 
 .product__categories-wrapper {
-    border: 1px pink solid;
+
     height: 30%;
     display: flex;
     flex-direction: column;
@@ -98,6 +118,15 @@
     gap: 10px;
 
 
+
+}
+
+.product__categories-list li:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    border-top-right-radius: 20px;
+    padding: 0 20px;
+    transition: all .5s ease;
 }
 
 .product__price-container {
@@ -135,7 +164,7 @@
 }
 
 .search button[type="submit"] {
-    background-color: #4e99e9;
+    background-color: var(--clr-rose);
     border: none;
     color: #fff;
     cursor: pointer;
@@ -151,5 +180,5 @@
 .search button[type="submit"]:hover {
     transform: scale(1.1);
     color: rgb(255, 255, 255);
-    background-color: blue;
+    background-color: var(--clr-rose);
 }

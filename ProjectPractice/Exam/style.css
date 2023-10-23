@@ -1,153 +1,272 @@
-.container {
-    border: 1px solid #ff0000(236, 217, 217);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.characterSelection {
     height: 100vh;
-    width: 98vw;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-
-}
-
-
-.enemyContainer,
-.characterContainer {
     width: 100%;
-
-    margin-top: 20px;
+    position: relative;
+    display: block;
 }
 
+.characterSelection__container {
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "playerone playertwo"
+        "imagecontainer imagecontainer"
+    ;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.characterSelection__images {
+    grid-area: imagecontainer;
+    border: 1px solid rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(5, .5fr);
+    grid-template-rows: repeat(2, .5fr);
+    place-items: center;
+}
+
+.characterSelection img {
+    width: 200px;
+    height: auto;
+    border: 1px dashed red;
+}
+
+.characterSelection__PlayerOne {
+    border: 1px solid rgb(0, 0, 0);
+    grid-area: playerone;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.characterSelection__PlayerOne img {
+    width: 500px;
+    height: auto;
+}
+
+.characterSelection__PlayerTwo {
+    border: 1px solid rgb(0, 0, 0);
+    grid-area: playertwo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.characterSelection__PlayerTwo img {
+    width: 500px;
+    height: auto;
+}
+
+.StarGame {
+    position: absolute;
+    top: 44%;
+    left: 44%;
+    padding: 40px 80px;
+    display: none;
+}
+
+.battleArea {
+
+    height: 100vh;
+    width: 100%;
+    display: none;
+    /* Add this to define it as a grid container */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "playerone playertwo"
+        "racemeter racemeter"
+    ;
+
+    grid-gap: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.battleArea__PlayerOne {
+    height: 100%;
+    width: 100%;
+    grid-area: playerone;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .3fr 2fr .4fr;
+    grid-template-areas: "healthbar"
+        "playerOneImage"
+        "playerAttackButtons";
+
+    grid-gap: 20px;
+    padding: 0 20px;
+}
+
+
+.playerOneHealthBar {
+    grid-area: healthbar;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+
+}
+
+.energybar {
+    width: 0%;
+    background: yellow;
+    height: 10px;
+}
+
+.playerOneImageContainer {
+    grid-area: playerOneImage;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerOneAttacksContainer {
+    grid-area: playerAttackButtons;
+
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 30%;
+
+}
+
+.battleArea__PlayerTwo {
+    grid-area: playertwo;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .3fr 2fr .4fr;
+    grid-template-areas: "healthbarTwo"
+        "playerTwoImage"
+        "playerTwoAttackButtons";
+
+    grid-gap: 20px;
+    padding: 0 20px;
+}
+
+.playerTwoHealthBar {
+    grid-area: healthbarTwo;
+
+
+}
+
+.playerTwoImageContainer {
+    grid-area: playerTwoImage;
+
+    transform: scaleX(-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.playerTwoAttacksContainer {
+    grid-area: playerTwoAttackButtons;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 30%;
+    padding: 0px 100px;
+}
+
+.raceMeter {
+    grid-area: racemeter;
+    position: absolute;
+    right: 39.3%;
+    top: -900px;
+    height: 100px;
+    width: 500px;
+    text-align: center;
+}
+
+.raceMeter button {
+    padding: 40px 40px;
+    background: transparent;
+    outline: none;
+    border: none;
+    background-image: url(./images/battle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.raceMeter button:hover {
+    transform: scale(1.3);
+}
+
+.raceMeter h1 {
+
+    font-size: 15px;
+}
+
+
+
+/* Slider for race */
 .slider {
     -webkit-appearance: none;
-    /* Override default CSS styles */
-    appearance: none;
     width: 100%;
-    /* Full-width */
-    height: 10px;
-    /* Specified height */
-    background: #000000;
-    /* Grey background */
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
     outline: none;
-    /* Remove outline */
     opacity: 0.7;
-    /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s;
-    /* 0.2 seconds transition on hover */
     transition: opacity .2s;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /* Override default look */
     appearance: none;
-    width: 25px;
-    /* Set a specific slider handle width */
-    height: 25px;
-    /* Slider handle height */
-    background: url(./images/player1.png) no-repeat center center;
-    /* Green background */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #899b00;
     cursor: pointer;
-    /* Cursor on hover */
-
 }
 
 .slider::-moz-range-thumb {
-    width: 20px;
-    /* Set a specific slider handle width */
+    width: 10px;
     height: 10px;
-    /* Slider handle height */
-    background: url(./images/player1.png) no-repeat center center;
-    /* Green background */
+    border-radius: 50%;
+    background: red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
-    /* Cursor on hover */
 }
 
-.SliderContainer {
-    width: 100%;
-    height: 200px;
+.BattleAreaPlayerTwo img,
+.BattleAreaPlayerOne img {
+    height: 300px;
+    width: auto;
 }
 
-.Name {
-    font-size: 15px;
-}
-
-.canvases {
-    border: 1px solid rgb(14, 14, 14);
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    position: relative;
-}
-
-.healthManaContainer {
-    border: 1px solid black;
-    position: absolute;
-    left: 100px;
-    top: 180px;
-
-
-}
-
-.playerCanvas {
-    position: absolute;
-    bottom: 50px;
-    left: 100px;
-    height: 350px;
-    width: 200px;
-    border: 1px solid black;
-}
-
-.EnemyCanvas {
-    position: absolute;
-    bottom: 50px;
-    right: 100px;
-    height: 350px;
-    width: 200px;
-    border: 1px solid black;
-}
-
-
-.combatSection {
-    border: 1px solid rgb(235, 1, 1);
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-}
-
-.BtnContainer {
-    border: 1px solid black;
-    height: 10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.btn {
+.playerOneAttacksContainer button {
     padding: 20px 40px;
 }
 
-.playercontainer {
-    border: 1px solid black;
-    height: 85%;
-    width: 50%;
-    padding: 10px;
-}
-
-.enemycontainer {
-    padding: 10p x;
-    border: 1px solid red;
-    height: 85%;
-    width: 50%;
-    padding: 10px;
-}
-
-.characterContainer {
-    display: flex;
-    height: 100%;
-    gap: 20px;
-}
-
-#enemyHealthRange {
-    direction: rtl;
+.playerTwoAttacksContainer button {
+    padding: 20px 40px;
 }

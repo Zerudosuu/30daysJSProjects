@@ -2,71 +2,60 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="playerSelection.css">
+    <link rel="stylesheet" href="style.css"> <!-- Updated the path to the stylesheet -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam</title>
+    <title>Document</title>
 </head>
 
 <body>
-
-
-    <section class="CharacterSelectMenu">
-        <button class="sample">Okay</button>
-        <div class="showPlayer">
-            <img src="" alt="" class="playerChoosenChar">
+    <section class="characterSelection">
+        <div class="characterSelection__container">
+            <div class="characterSelection__images">
+            </div>
+            <div class="characterSelection__PlayerOne">
+                <img src="" alt="" class="playerOneCharacter">
+                <button class="playerOneSubmit">Select</button>
+            </div>
+            <div class="characterSelection__PlayerTwo">
+                <img src="" alt="" class="playerTwoCharacter">
+                <button class="playerTwoSubmit">Select</button>
+            </div>
         </div>
 
-        <div class="PlayerSelection">
-        </div>
-
+        <button class="StarGame">START GAME</button>
     </section>
 
-    <div class="container">
-
-        <div class="SliderContainer">
-            <div class="enemyRange">
-                <h3>Enemy</h3>
-                <input type="range" step="1" min="1" max="100" value="50" class="slider" id="enemyRange">
+    <section class="battleArea">
+        <div class="battleArea__PlayerOne">
+            <div class="playerOneHealthBar">
+                <div class="energybar"></div>
             </div>
-            <div class="playerRange">
-                <h>Player</h>
-                <input type="range" step="1" min="1" max="100" value="0" class="slider" id="playerRange">
+            <div class="playerOneImageContainer">
+                <img src="" alt="" class="BattleAreaPlayerOne">
             </div>
+            <div class="playerOneAttacksContainer"></div>
         </div>
-
-
-        <div class="combatSection">
-            <div class="BtnContainer">
-                <button class="Special btn"> </button>
-                <button class="Utility btn"> </button>
-                <button class="BasicAttack btn"> </button>
+        <div class="battleArea__PlayerTwo">
+            <div class="playerTwoHealthBar"></div>
+            <div class="playerTwoImageContainer">
+                <img src="" alt="" class="BattleAreaPlayerTwo">
             </div>
-
-            <div class="characterContainer">
-                <div class="playercontainer">
-                    <h3 class="PlayerName"></h3>
-                    <h3>Health</h3>
-                    <input type="range" step="1" min="1" max="100" value="0" class="Hpslider" id="playerHealthRange">
-                    <h3>Mana</h3>
-                    <input type="range" step="1" min="1" max="100" value="0" class="Manaslider" id="playerManaRange">
-
-                    <img src="" alt="" class="playerImg">
-                </div>
-                <div class="enemycontainer">
-                    <h3 class="EnemyName"></h3>
-                    <h3>Health</h3>
-                    <input type="range" step="1" min="1" max="100" value="0" class="Hpslider" id="enemyHealthRange">
-                    <h3>Mana</h3>
-                    <input type="range" step="1" min="1" max="100" value="0" class="Manaslider" id="enemyManaRange">
-                </div>
-            </div>
+            <div class="playerTwoAttacksContainer"></div>
         </div>
+        <div class="raceMeter">
+            <h1 class="playerName"></h1>
+            <div class="slidecontainer ">
+                <input type="range" min="1" max="100" value="50" class="slider" id="playerRange">
+            </div>
+            <h1 class="enemyName"></h1>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="enemyRange">
+            </div>
 
-        <h3 class="Attack"></h3>
-        <button class="StartRace"> Play</button>
-    </div>
+            <button class="StartRace"></button>
+        </div>
+    </section>
 
     <script src="main.js"></script>
 </body>
