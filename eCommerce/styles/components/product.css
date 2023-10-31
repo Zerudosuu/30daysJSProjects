@@ -138,14 +138,22 @@
 .product__addToCart svg {
     height: 30px;
     width: 30px;
+    background-color: black;
+    border-radius: 50%;
+    color: var(--clr-section);
+    transition: scale .6s ease;
+}
 
 
+.product__addToCart:hover {
+    transform: scale(1.3);
+    transition: scale .6s ease;
 }
 
 .product__addToCart {
     text-decoration: none;
     color: var(--clr-dark);
-    border: 1px solid red;
+
 }
 
 /* searchBar */

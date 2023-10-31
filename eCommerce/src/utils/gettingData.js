@@ -20,11 +20,6 @@ const fetchingData = () => {
                   ? response[i].title.substring(0, 50).concat("...")
                   : response[i].title
               }</h2>
-              <p class="product__description">${
-                response[i].description.length > 80
-                  ? response[i].description.substring(0, 80).concat(" ...more")
-                  : response[i].description
-              }</p>
               <div class="product__price-container">
                 <h3 class="product__price"> $${response[i].price}</h3>
                 <button href="" class="product__addToCart">
@@ -43,15 +38,10 @@ const fetchingData = () => {
         displayProducts(searchText);
       });
 
-      // Initial display of all products
       displayProducts("");
     }
 
     fetchProducts("https://fakestoreapi.com/products");
-
-    Array.of(product).forEach((btn) => {
-      console.log(btn.contains.classList("product__addToCart"));
-    });
   });
 };
 

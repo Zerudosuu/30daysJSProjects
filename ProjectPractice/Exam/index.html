@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css"> <!-- Updated the path to the stylesheet -->
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="./images/G-A.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GRAND ARENA</title>
 </head>
 
 <body>
@@ -14,48 +16,109 @@
             <div class="characterSelection__images">
             </div>
             <div class="characterSelection__PlayerOne">
+                <h1>Player 1 </h1>
                 <img src="" alt="" class="playerOneCharacter">
-                <button class="playerOneSubmit">Select</button>
+                <button class="playerOneSubmit"><span class="button_top">Select</span></button>
             </div>
             <div class="characterSelection__PlayerTwo">
+                <h1>Player 2</h1>
                 <img src="" alt="" class="playerTwoCharacter">
-                <button class="playerTwoSubmit">Select</button>
+                <button class="playerTwoSubmit"><span class="button_top">Select</span></button>
             </div>
         </div>
 
-        <button class="StarGame">START GAME</button>
+        <button class="StarGame"><span class="button_top">Start Game</span></button>
     </section>
 
     <section class="battleArea">
         <div class="battleArea__PlayerOne">
             <div class="playerOneHealthBar">
-                <div class="energybar"></div>
+                <progress class="PlayerOneHealth" value="100" max="100"></progress>
+                <progress class="PlayerOneMana" value="100" max="100"></progress>
+                <progress class="PlayerOneenergybar" value="0" max="100"></progress>
+                <div class="PoneWincontainer">
+                    <svg id="p1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <svg id="p2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <svg id="p3 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                </div>
             </div>
-            <div class="playerOneImageContainer">
-                <img src="" alt="" class="BattleAreaPlayerOne">
+            <div class="playerOneImageContainer animate__animated">
+                <img src="" alt="" class="BattleAreaPlayerOne ">
             </div>
             <div class="playerOneAttacksContainer"></div>
+            <img src="" alt="" class="playerOneSupperAttacksContainerImage animate__animated">
+
         </div>
         <div class="battleArea__PlayerTwo">
-            <div class="playerTwoHealthBar"></div>
-            <div class="playerTwoImageContainer">
-                <img src="" alt="" class="BattleAreaPlayerTwo">
+            <div class="playerTwoHealthBar">
+                <progress class="PlayerTwoHealth" value="100" max="100"></progress>
+                <progress class="PlayerTwoMana" value="100" max="100"></progress>
+
+                <progress class="PlayerTwoenergybar" value="0" max="100"></progress>
+
+                <div class="PtwoWincontainer">
+                    <svg id="p1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <svg id="p2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <svg id="p3 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                </div>
+            </div>
+            <div class="playerTwoImageContainer animate__animated">
+                <img src="" alt="" class="BattleAreaPlayerTwo ">
             </div>
             <div class="playerTwoAttacksContainer"></div>
+            <img src="" alt="" class="playerTwoSupperAttacksContainerImage animate__animated">
         </div>
         <div class="raceMeter">
             <h1 class="playerName"></h1>
             <div class="slidecontainer ">
-                <input type="range" min="1" max="100" value="50" class="slider" id="playerRange">
+                <input type="range" min="1" max="100" value="50" class="P1slider" id="playerRange">
             </div>
             <h1 class="enemyName"></h1>
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="enemyRange">
+            <div class="slidecontainer ">
+                <input type="range" min="1" max="100" value="50" class="P2slider" id="enemyRange">
             </div>
 
             <button class="StartRace"></button>
         </div>
     </section>
+
+    <audio autoplay class="playAttackAudio">
+        <source src="" type="audio/mpeg">
+
+    </audio>
+
+    <audio autoplay class="playreactionAudio">
+        <source src="" type="audio/mpeg">
+    </audio>
+    <audio autoplay class="backgroundAudio">
+        <source src="./images/Survivor - Eye Of The Tiger (Official HD Video) (mp3cut.net).mp3" type="audio/mpeg">
+    </audio>
 
     <script src="main.js"></script>
 </body>

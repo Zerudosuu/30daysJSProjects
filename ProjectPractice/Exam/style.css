@@ -12,7 +12,6 @@
 }
 
 .characterSelection__container {
-    border: 1px solid red;
     width: 100%;
     height: 100%;
     display: grid;
@@ -24,25 +23,40 @@
     ;
     grid-gap: 20px;
     padding: 20px;
+    background: url(./images/1000.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .characterSelection__images {
     grid-area: imagecontainer;
-    border: 1px solid rgb(0, 0, 0);
+
     display: grid;
     grid-template-columns: repeat(5, .5fr);
     grid-template-rows: repeat(2, .5fr);
     place-items: center;
+    grid-gap: 20px;
 }
 
 .characterSelection img {
-    width: 200px;
-    height: auto;
-    border: 1px dashed red;
+    width: 150px;
+    height: 150px;
+
+}
+
+.characterSelection__images img {
+    /* From https://css.glass */
+    background: rgba(148, 147, 17, 0.48);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.9px);
+    -webkit-backdrop-filter: blur(9.9px);
+    border: 1px solid rgba(148, 147, 17, 0.3);
 }
 
 .characterSelection__PlayerOne {
-    border: 1px solid rgb(0, 0, 0);
+
     grid-area: playerone;
     display: flex;
     flex-direction: column;
@@ -52,11 +66,21 @@
 
 .characterSelection__PlayerOne img {
     width: 500px;
-    height: auto;
+    height: 500px;
+}
+
+.characterSelection__PlayerOne h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.characterSelection__PlayerTwo h1 {
+    color: white;
+    font-size: 50px;
 }
 
 .characterSelection__PlayerTwo {
-    border: 1px solid rgb(0, 0, 0);
+
     grid-area: playertwo;
     display: flex;
     flex-direction: column;
@@ -64,21 +88,126 @@
     align-items: center;
 }
 
+
+.playerOneSubmit {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.playerOneSubmit:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+.playerOneSubmit:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+
+.playerTwoSubmit {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.playerTwoSubmit:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+.playerTwoSubmit:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+
 .characterSelection__PlayerTwo img {
     width: 500px;
-    height: auto;
+    height: 500px;
 }
 
 .StarGame {
     position: absolute;
     top: 44%;
     left: 44%;
-    padding: 40px 80px;
+
     display: none;
 }
 
-.battleArea {
+.StarGame {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
 
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 20px 40px;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.StarGame:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+.StarGame:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+.battleArea {
+    background: url(./images/battlearea1.gif);
     height: 100vh;
     width: 100%;
     display: none;
@@ -93,6 +222,10 @@
     grid-gap: 20px;
     padding: 20px;
     position: relative;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .battleArea__PlayerOne {
@@ -109,47 +242,134 @@
 
     grid-gap: 20px;
     padding: 0 20px;
+    position: relative;
 }
 
 
 .playerOneHealthBar {
     grid-area: healthbar;
-    border: 1px solid red;
+
     display: flex;
-    align-items: center;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 
 }
 
-.energybar {
-    width: 0%;
-    background: yellow;
-    height: 10px;
+.PlayerOneHealth {
+    border: 1px dashed black;
+    -webkit-appearance: none;
+    /* For webkit-based browsers */
+    appearance: none;
+    width: 100%;
+    transition: all 0.5s ease-in;
+    height: 40px;
+    border-top-right-radius: 50px;
+    transition: all ease 0.4s;
+}
+
+
+.PlayerOneHealth::-webkit-progress-bar {
+    background: transparent;
+    transition: all ease 0.4s;
+}
+
+.PlayerOneHealth::-webkit-progress-value {
+    background: rgb(255, 3, 3);
+    background: linear-gradient(90deg, rgba(255, 3, 3, 1) 0%, rgba(9, 121, 10, 1) 22%, rgba(0, 255, 139, 1) 100%);
+    border-top-right-radius: 50px;
+    transition: all ease 0.4s;
+}
+
+
+.PlayerOneMana {
+    border: 1px dashed black;
+    -webkit-appearance: none;
+    /* For webkit-based browsers */
+    appearance: none;
+    height: 20px;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    transition: all ease 0.4s;
+}
+
+.PlayerOneMana::-webkit-progress-bar {
+    background: transparent;
+    transition: all ease 0.4s;
+}
+
+.PlayerOneMana::-webkit-progress-value {
+    background-color: rgb(74, 5, 234);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all ease 0.4s;
+}
+
+
+.PlayerOneenergybar {
+    border: 1px dashed black;
+    -webkit-appearance: none;
+    /* For webkit-based browsers */
+    appearance: none;
+    height: 20px;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    transition: all ease 0.4s;
+}
+
+.PlayerOneenergybar::-webkit-progress-bar {
+    background: transparent;
+    transition: all ease 0.4s;
+}
+
+.PlayerOneenergybar::-webkit-progress-value {
+    background-color: yellow;
+    border-bottom-right-radius: 20px;
+    transition: all ease 0.4s;
 }
 
 .playerOneImageContainer {
     grid-area: playerOneImage;
-
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: absolute;
+    bottom: -30%;
+    left: 30%;
 }
 
 .playerOneAttacksContainer {
     grid-area: playerAttackButtons;
-
     display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     position: absolute;
-    bottom: 30%;
+    bottom: 400%;
+
+    padding: 0 50px;
 
 }
 
+
+.playerOneSupperAttacksContainerImage {
+    border: 1px solid red;
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    bottom: -250px;
+    left: -250px;
+}
+
+
 .battleArea__PlayerTwo {
     grid-area: playertwo;
-
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: .3fr 2fr .4fr;
@@ -163,8 +383,91 @@
 
 .playerTwoHealthBar {
     grid-area: healthbarTwo;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+
+}
 
 
+
+.PlayerTwoHealth {
+    border: 1px dashed black;
+
+    -webkit-appearance: none;
+    /* For webkit-based browsers */
+    appearance: none;
+    width: 100%;
+    transition: all 0.5s ease-in;
+    transform: scaleX(-1);
+    height: 40px;
+    border-top-right-radius: 40px;
+    transition: all ease 0.4s;
+
+
+}
+
+.PlayerTwoHealth::-webkit-progress-bar {
+    background: transparent;
+    transition: all ease 0.4s;
+}
+
+.PlayerTwoHealth::-webkit-progress-value {
+    background: rgb(255, 3, 3);
+    background: linear-gradient(90deg, rgba(255, 3, 3, 1) 0%, rgba(9, 121, 10, 1) 22%, rgba(0, 255, 139, 1) 100%);
+    border-top-right-radius: 50px;
+    transition: all ease 0.4s;
+}
+
+.PlayerTwoMana {
+    border: 1px dashed black;
+    -webkit-appearance: none;
+    /* For webkit-based browsers */
+    appearance: none;
+    height: 20px;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: scaleX(-1);
+    transition: all ease 0.4s;
+}
+
+.PlayerTwoMana::-webkit-progress-bar {
+    background: transparent;
+    transition: all ease 0.4s;
+}
+
+.PlayerTwoMana::-webkit-progress-value {
+    background-color: rgb(74, 5, 234);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all ease 0.4s;
+}
+
+.PlayerTwoenergybar {
+    border: 1px dashed black;
+    -webkit-appearance: none;
+    /* For webkit-based browsers */
+    appearance: none;
+    height: 20px;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    transform: scaleX(-1);
+    transition: all ease 0.4s;
+}
+
+.PlayerTwoenergybar::-webkit-progress-bar {
+    background: transparent;
+    transition: all ease 0.4s;
+}
+
+.PlayerTwoenergybar::-webkit-progress-value {
+    background-color: yellow;
+    border-bottom-right-radius: 20px;
+    transition: all ease 0.4s;
 }
 
 .playerTwoImageContainer {
@@ -174,6 +477,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: -20%;
+    left: 10%;
 }
 
 
@@ -185,15 +491,27 @@
     align-items: center;
     gap: 20px;
     position: absolute;
-    bottom: 30%;
-    padding: 0px 100px;
+
+    bottom: 400%;
+    padding: 0 100px;
+
+}
+
+.playerTwoSupperAttacksContainerImage {
+    border: 1px solid red;
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    bottom: -200px;
+    right: -200px;
+    transform: scaleX(-1);
 }
 
 .raceMeter {
     grid-area: racemeter;
     position: absolute;
-    right: 39.3%;
-    top: -900px;
+    right: 36.3%;
+    top: -800px;
     height: 100px;
     width: 500px;
     text-align: center;
@@ -224,36 +542,70 @@
 
 
 /* Slider for race */
-.slider {
+.P1slider {
     -webkit-appearance: none;
     width: 100%;
     height: 5px;
     border-radius: 5px;
-    background: #d3d3d3;
+    background: #271d1d;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
 
-.slider::-webkit-slider-thumb {
+.P1slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 10px;
-    height: 10px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background: #899b00;
+    background: var(--backgroundimage);
+    /* Set the background color to red */
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.slider::-moz-range-thumb {
+.P1slider::-moz-range-thumb {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: red;
-    background-position: center;
+    cursor: pointer;
+}
+
+
+.P2slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #271d1d;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.P2slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--backgroundimage);
+    /* Set the background color to red */
+    cursor: pointer;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.P2slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
     cursor: pointer;
 }
 
@@ -264,9 +616,36 @@
 }
 
 .playerOneAttacksContainer button {
-    padding: 20px 40px;
+    padding: 15px 30px;
 }
 
 .playerTwoAttacksContainer button {
-    padding: 20px 40px;
+    padding: 15px 30px;
+}
+
+.PoneWincontainer {
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+}
+
+.PoneWincontainer svg {
+    color: rgb(32, 189, 32);
+    width: 30px;
+    height: auto;
+
+}
+
+
+.PtwoWincontainer {
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+}
+
+.PtwoWincontainer svg {
+    color: rgb(32, 189, 32);
+    width: 30px;
+    height: auto;
+
 }
