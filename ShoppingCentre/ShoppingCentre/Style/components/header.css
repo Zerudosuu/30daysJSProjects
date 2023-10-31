@@ -1,0 +1,272 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* From https://css.glass */
+    /* background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.32); */
+    margin-top: 20px;
+}
+
+.header__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+}
+
+.header__logo img {
+    width: 100px;
+
+}
+
+
+.header__logo:hover img {
+    transform: scale(1.2);
+    transition: all 0.1s linear;
+}
+
+.head__list {
+    padding: 0;
+    list-style: none;
+    display: none;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 5px;
+    font-family: 'Chillax', sans-serif;
+    position: relative;
+
+}
+
+.head__list li {
+
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.head__list li:hover {
+    background-color: var(--clr-section);
+    color: var(--clr-dark);
+}
+
+.head__list li svg {
+    height: 100%;
+    width: 25px;
+
+
+}
+
+.mobilenav {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.mobilenav button {
+
+    height: 30px;
+    width: 30px;
+
+}
+
+.mobilenav:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in;
+}
+
+.mobilenav button svg {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: none;
+}
+
+/* xs */
+@media (min-width: 475px) {}
+
+/* sm */
+@media (min-width: 640px) {
+    .mobilenav {
+        display: none;
+    }
+
+    .head__list {
+        display: flex;
+        font-size: var(--size-sm);
+    }
+
+    .head__list li {
+        padding: 2px;
+    }
+
+    nav {
+        display: flex;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .mobilenav {
+        display: none;
+    }
+
+    .head__list {
+        display: flex;
+        font-size: var(--size-base);
+
+    }
+
+    .head__list li {
+        padding: 3px 6px;
+    }
+
+    .header__section {
+        justify-content: space-between;
+    }
+
+    nav {
+        display: flex;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .header__logo img {
+        width: 150px;
+    }
+
+    .head__list {
+        display: flex;
+
+    }
+
+    .header__section {
+        justify-content: space-between;
+    }
+
+    .mobilenav {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+}
+
+/* xl */
+/* @media (min-width: 1280px) {
+
+} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+  
+} */
+
+#Signup {
+    background-color: var(--clr-section);
+    height: 415px;
+    width: 350px;
+    position: absolute;
+    left: 66%;
+    top: 6%;
+
+
+}
+
+
+.form-box {
+    max-width: 300px;
+    background: #f1f7fe;
+    overflow: hidden;
+    border-radius: 16px;
+    color: #010101;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px 24px;
+    gap: 16px;
+    text-align: center;
+}
+
+/*Form text*/
+.title {
+    font-family: 'Chillax', sans-serif;
+    font-weight: 300;
+    font-size: var(--size-2xl);
+}
+
+.subtitle {
+    font-family: 'Chillax', sans-serif;
+    font-size: var(--size-sm);
+    color: #666;
+}
+
+/*Inputs box*/
+.form-container {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 1rem 0 .5rem;
+    width: 100%;
+}
+
+.input {
+    background: none;
+    border: 0;
+    outline: 0;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-size: .9rem;
+    padding: 8px 15px;
+}
+
+.form-section {
+    padding: 16px;
+    font-size: .85rem;
+    background-color: #e0ecfb;
+    box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+    font-weight: bold;
+    color: #0066ff;
+    transition: color .3s ease;
+}
+
+.form-section a:hover {
+    color: var(--clr-teal);
+    text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+    background-color: var(--clr-rose);
+    color: #fff;
+    border: 0;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.form button:hover {
+    background-color: var(--clr-teal);
+}
