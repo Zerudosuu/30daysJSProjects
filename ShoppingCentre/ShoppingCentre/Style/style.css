@@ -1,7 +1,7 @@
 :root {
   --clr-dark: #020617;
-  --clr-light: #f1f5f9;
-  --clr-section: #f7fee7;
+  --clr-light: #fef6e4;
+  --clr-section: #001858;
   --clr-slate400: #94a3b8;
   --clr-slate600: #475569;
   --clr-slate800: hsl(217, 33%, 17%);
@@ -57,7 +57,7 @@ html {
 
 body {
   font-family: 'Archivo', sans-serif;
-  background: var(--clr-dark);
+  background: var(--clr-light);
   color: var(--clr-section);
   overflow-x: hidden;
 

@@ -28,6 +28,39 @@
   
 } */
 
+.btn {
+    position: relative;
+    padding: 8px 16px 4px 20px;
+    color: #001858;
+    border: 3px solid #001858;
+    -webkit-transition: padding 0.3s ease-in-out;
+    transition: padding 0.3s ease-in-out;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: #f582ae;
+    border-right: 3px solid #f582ae;
+    border-bottom: 3px solid #f582ae;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    padding: 6px 20px;
+}
+
+.btn:hover:before {
+    top: 0;
+    left: 0;
+}
+
 .container {
     width: 100%;
     margin-left: auto;
