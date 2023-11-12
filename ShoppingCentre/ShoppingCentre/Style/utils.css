@@ -32,7 +32,7 @@
     position: relative;
     padding: 8px 16px 4px 20px;
     color: #001858;
-    border: 3px solid #001858;
+    border: 2px solid #001858;
     -webkit-transition: padding 0.3s ease-in-out;
     transition: padding 0.3s ease-in-out;
 }

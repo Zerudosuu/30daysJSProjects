@@ -1,0 +1,55 @@
+.introduction {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.introduction__title {
+    text-align: center;
+    font-family: 'Panchang', sans-serif;
+    width: 30ch;
+    margin-bottom: 20px;
+
+}
+
+.box {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box svg {
+    height: 200px;
+    width: auto;
+}
+
+.box h2 {
+    font-family: 'Chillax', sans-serif;
+    font-size: var(--size-2xl);
+    font-weight: 600;
+}
+
+.box p {
+    color: var(--clr-slate600);
+    font-size: var(--size-sm);
+    font-family: 'Chillax', sans-serif
+}
+
+.introductionContainer {
+
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
