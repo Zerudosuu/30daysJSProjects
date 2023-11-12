@@ -15,12 +15,13 @@
 
 .giftsection__title {
 
-    height: 50%;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 .giftsection__title h1 {
@@ -29,6 +30,7 @@
     display: flex;
     align-items: center;
     font-family: 'Chillax', sans-serif;
+    gap: 10px;
 }
 
 .giftsection__title h1 svg {
@@ -40,6 +42,15 @@
     font-size: var(--size-base);
     font-family: 'Synonym', sans-serif;
     color: var(--clr-slate400);
+}
+
+.giftsection__title button {
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+.btn {
+    z-index: 1;
 }
 
 .giftsection__containers {

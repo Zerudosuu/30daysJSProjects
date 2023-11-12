@@ -1,0 +1,81 @@
+.footer {
+    background: var(--clr-dark);
+    border-top: 5px dashed white;
+}
+
+.footerwrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Chillax', sans-serif;
+}
+
+.footerwrapper h1 {
+    font-size: var(--size-2xl);
+    font-family: 'Chillax', sans-serif;
+    color: var(--clr-light);
+}
+
+.footerlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlogo img {
+    height: 100px;
+}
+
+
+
+.contact {
+    font-size: var(--size-base);
+    font-weight: 300;
+}
+
+
+
+.contact h3 {
+    font-size: var(--size-base);
+    color: var(--clr-slate400);
+    font-family: 'Synonym', sans-serif;
+}
+
+.contact h4 {
+    color: var(--clr-slate600);
+    font-family: 'Synonym', sans-serif;
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about a {
+    color: var(--clr-slate600);
+    text-decoration: none;
+    font-size: var(--size-base);
+    font-family: 'Synonym', sans-serif;
+}
+
+.Account {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.Account a {
+    color: var(--clr-slate600);
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+    font-size: var(--size-base);
+    font-family: 'Synonym', sans-serif;
+}
+
+.Account a:hover,
+.about a:hover {
+
+    text-decoration: underline;
+}
