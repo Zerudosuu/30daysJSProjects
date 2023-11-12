@@ -9,9 +9,10 @@
 
 .introduction__title {
     text-align: center;
-    font-family: 'Panchang', sans-serif;
-    width: 30ch;
-    margin-bottom: 20px;
+    font-family: 'Chillax', sans-serif;
+    width: 50ch;
+    margin-bottom: 40px;
+    font-size: var(--size-3xl);
 
 }
 
@@ -24,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
 }
 
@@ -37,12 +38,14 @@
     font-family: 'Chillax', sans-serif;
     font-size: var(--size-2xl);
     font-weight: 600;
+    color: var(--clr-slate800);
 }
 
 .box p {
     color: var(--clr-slate600);
     font-size: var(--size-sm);
-    font-family: 'Chillax', sans-serif
+    font-family: 'Synonym', sans-serif;
+
 }
 
 .introductionContainer {
