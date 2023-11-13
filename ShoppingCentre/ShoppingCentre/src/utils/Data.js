@@ -47,10 +47,17 @@ const fetchingData = () => {
         console.error("There was a problem with the fetch operation:", error);
       });
 
-    ScrollReveal().reveal(".product", {
+    ScrollReveal().reveal(".giftsection__containers", {
+      duration: 1000,
+      origin: "right",
+      distance: "1000px",
+      easing: "ease-in-out",
+      mobile: false,
+    });
+    ScrollReveal().reveal(".box", {
       duration: 1000,
       origin: "bottom",
-      distance: "50px",
+      distance: "1000px",
       easing: "ease-in-out",
       mobile: false,
     });
