@@ -10,5 +10,7 @@ import "../Style/components/footer.css";
 import "../Style/utils.css";
 
 import fetchingData from "./utils/Data";
+import AnimationMnager from "./utils/Animation";
 
 fetchingData();
+AnimationMnager();

@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* From https://css.glass */
@@ -9,7 +10,6 @@
         -webkit-backdrop-filter: blur(3.7px);
         border: 1px solid rgba(255, 255, 255, 0.32); */
     margin-top: 20px;
-
     width: 100%;
     position: fixed;
     z-index: 999999;
@@ -106,6 +106,35 @@
 
 nav {
     display: none;
+}
+
+.headerListHoverSection {
+    width: 100%;
+    height: 300px;
+}
+
+.WomanSection {
+    width: 100%;
+    border: 1px solid red;
+    height: 100%;
+    display: none;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+
+.WomanSection h1 {
+    font-size: var(--size-xl);
+    font-family: 'Chillax', sans-serif;
+    margin-bottom: 10px;
+}
+
+
+.WomanSection ul li {
+    padding: 0;
+    list-style-type: none;
+    font-size: var(--size-xs);
+    font-family: 'Synonym', sans-serif;
+    margin-bottom: 5px;
 }
 
 /* 
