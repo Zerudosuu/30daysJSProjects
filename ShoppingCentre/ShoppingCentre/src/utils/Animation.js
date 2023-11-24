@@ -7,7 +7,6 @@ const giftSection = document.querySelector(".giftSection");
 let isWomanSectionOpen = true;
 
 const AnimationMnager = () => {
-  console.log(headlist);
   const introductionSection = document.querySelector(".introduction");
 
   ToIntroductionBtn.addEventListener("click", () => {

@@ -11,6 +11,8 @@ import "../Style/utils.css";
 
 import fetchingData from "./utils/Data";
 import AnimationMnager from "./utils/Animation";
+import addtoCart from "./utils/addToCart";
 
 fetchingData();
 AnimationMnager();
+addtoCart();
