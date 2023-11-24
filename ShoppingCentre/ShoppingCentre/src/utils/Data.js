@@ -67,21 +67,38 @@ const fetchingData = () => {
     });
   }
 
-  function displayCart(item, fetcheddata) {
-    let imageSrc = fetcheddata[item].image;
-    let addtocartContainer = document.querySelector(".addtocartContainer");
+  function displayCart(item, fetchedData) {
+    let addToContainer = document.querySelector(".addtoCartContainer");
+    let count = 0;
+    let elements = addToContainer.querySelectorAll(`#${CSS.escape(item)}`);
 
-    let existingImages = addtocartContainer.querySelectorAll(
-      `img[src="${imageSrc}"]`
-    );
+    if (elements.length === 0) {
+      let addToCartItem = document.createElement("div");
+      addToCartItem.classList.add("itemInCart");
+      addToCartItem.id = item;
 
-    if (existingImages.length === 0) {
-      const imageElement = document.createElement("img");
-      imageElement.src = imageSrc;
-
-      addtocartContainer.appendChild(imageElement);
+      addToContainer.appendChild(addToCartItem);
+      count++;
+    } else {
+      count = elements.length; // Update count based on found elements
     }
+
+    console.log("count: " + count);
   }
 };
 
 export default fetchingData;
+
+// let imageSrc = fetcheddata[item].image;
+// let addtocartContainer = document.querySelector(".addtocartContainer");
+
+// let existingImages = addtocartContainer.querySelectorAll(
+//   `img[src="${imageSrc}"]`
+// );
+
+// if (existingImages.length === 0) {
+//   const imageElement = document.createElement("img");
+//   imageElement.src = imageSrc;
+
+//   addtocartContainer.appendChild(imageElement);
+// }
