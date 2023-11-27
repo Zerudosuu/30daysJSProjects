@@ -153,6 +153,34 @@ nav {
     height: 100px;
     width: 100%;
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px
+}
+
+.itemInCart img {
+    width: 70px;
+    height: 100%;
+    mix-blend-mode: difference;
+
+}
+
+.descriptionHolder {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+.buttonAddLess {
+    position: absolute;
+    border: 1px solid black;
+    width: 50%;
+    height: 30px;
+    bottom: 0;
+    right: 0;
 }
 
 /* 

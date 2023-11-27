@@ -73,17 +73,66 @@ const fetchingData = () => {
     let elements = addToContainer.querySelectorAll(`#${CSS.escape(item)}`);
 
     if (elements.length === 0) {
+      // Create a parent container
       let addToCartItem = document.createElement("div");
       addToCartItem.classList.add("itemInCart");
       addToCartItem.id = item;
-
       addToContainer.appendChild(addToCartItem);
+
+      // Add image in the div
+      let ItemImage = document.createElement("img");
+      ItemImage.src = fetchedData[item].image;
+
+      // Add another div for description
+      let descriptionHolder = document.createElement("div");
+      descriptionHolder.classList.add("descriptionHolder");
+      addToCartItem.appendChild(ItemImage);
+      addToCartItem.appendChild(descriptionHolder);
+
+      // Create and append description elements
+      let titleElement = document.createElement("h4");
+      titleElement.textContent =
+        fetchedData[item].title.length > 10
+          ? fetchedData[item].title.substring(0, 20).concat("...")
+          : fetchedData[item].title;
+
+      //${ title.length > 18 ? title.substring(0, 30).concat("...") : title}
+
+      let descriptionElement = document.createElement("h5");
+      descriptionElement.textContent =
+        fetchedData[item].description.length > 10
+          ? fetchedData[item].description.substring(0, 20).concat("...")
+          : fetchedData[item].description;
+
+      let priceElement = document.createElement("h5");
+      priceElement.textContent = fetchedData[item].price;
+
+      let buttondiv = document.createElement("div");
+      buttondiv.classList = "buttonAddLess";
+
+      let buttonAdd = document.createElement("button");
+      buttonAdd.classList.add("buttonadd");
+
+      let buttonMinus = document.createElement("button");
+      buttonMinus.classList.add("buttonminus");
+      // Create an img element
+      buttonAdd.innerHTML = ``;
+
+      buttondiv.appendChild(addimg);
+      buttondiv.appendChild(buttonAdd);
+      buttondiv.appendChild(buttonMinus);
+
+      descriptionHolder.appendChild(buttondiv);
+      descriptionHolder.appendChild(titleElement);
+      descriptionHolder.appendChild(descriptionElement);
+      descriptionHolder.appendChild(priceElement);
+
       count++;
     } else {
       count = elements.length; // Update count based on found elements
     }
 
-    console.log("count: " + count);
+    console.log(elements);
   }
 };
 
